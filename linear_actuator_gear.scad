@@ -4,7 +4,7 @@ use <threads.scad>
 difference(){
 union(){
     
-    gear (
+scale([0.96,0.96,1])    gear (
 number_of_teeth = 40,
 	circular_pitch=210,
 	gear_thickness = 10,
@@ -26,7 +26,7 @@ cylinder(r=13.5, h=10, center=true);
 translate([0,0,10+(12.3/2)+8.5]) cylinder(r=(19.7/2), h=12.3, center=true, $fn=100);
 }
 
-translate([0,0,-40]) 
+scale([1.18,1.18,1]) translate([0,0,-40]) 
 metric_thread( diameter=14, pitch=4, length=80,
 n_starts =3,
 internal=true
